@@ -1,0 +1,2 @@
+class NewsRelease < ApplicationRecord
+end

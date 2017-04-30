@@ -1,0 +1,34 @@
+
+<h1>ニュースリリース</h1>
+<p>
+
+</p>
+<a href="../rate/update">更新</a><br>
+<a href="../rate/del">リセット</a><br>
+<a href="../rate/show">登録済みデータ表示</a><br>
+<br>
+<table class="bordered" width="1000">
+  <thead>
+    <th width="100">リリース日</th>
+    <th width="40">格付機関</th>
+    <th width="100">種別</th>
+    <th>タイトル</th>
+  </thead>
+  <tbody>
+  <% @rate.each do |n| %>
+    <% if n.rating_agency == "1" then %>
+      <% rating_agency = "R&I" %>
+      <% links = "<a href=https://www.r-i.co.jp#{n.links} target='_blank'>" %>
+    <% else %>
+      <% rating_agency = "JCR" %>
+      <% links = "<a href=https://www.jcr.co.jp#{n.links} target='_blank'>" %>
+    <% end %>
+    <tr>
+      <td><%= n.news_date %></td>
+      <td><%= rating_agency %></td>
+      <td><%= n.syubetu %></td>
+      <td><%= links.html_safe %><%= n.news %></a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
