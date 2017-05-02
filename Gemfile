@@ -66,3 +66,5 @@ gem 'mysql2'
          gem "rspec-rails"
    end
 
+# Used bootstrap-sass
+gem 'bootstrap-sass'

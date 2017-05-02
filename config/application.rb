@@ -15,5 +15,6 @@ module ScrapeRate
     # lib配下を自動的にロードする
     config.autoload_paths += %W(#{config.root}/lib)
 
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   end
 end

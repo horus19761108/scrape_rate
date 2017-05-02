@@ -9,10 +9,6 @@ Rails.application.routes.draw do
 
   get '/rate/del', to: 'rate#delete'
 
-  ###
-  get '/jcr/', to: 'jcr#index'
- 
-  get '/jcr/show', to: 'jcr#show'
-
+  resources :users
 
 end
